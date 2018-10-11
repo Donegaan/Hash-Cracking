@@ -6,12 +6,12 @@ echo "Running SHA256 hashcat"
 
 # dictionary attack
 echo "Rockyou"
-hashcat -m 7400 -a 3 -O ./hashes/des.txt ./wordlists/rockyou.txt
+hashcat -m 7400 -a 3 -O ./hashes/sha256.txt ./wordlists/rockyou.txt
 
 # mask attack for 5 lowercase letters
 echo "Mask"
-hashcat -m 7400 -a 3 -O ./hashes/des.txt ?l?l?l?l?l
+hashcat -m 7400 -a 3 -O ./hashes/sha256.txt ?l?l?l?l?l
 
 # concatentation attack
 echo "Concat"
-hashcat -m 7400 -a 1 -O ./hashes/des.txt ./wordlists/four.txt ./wordlists/four.txt
+hashcat -m 7400 -a 1 -O ./hashes/sha256.txt ./wordlists/four.txt ./wordlists/four.txt
