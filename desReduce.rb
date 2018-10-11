@@ -1,22 +1,19 @@
 if ARGV.length != 1
-    puts "We need exactly one parameter. The name of a file."
+    puts "Nee the name of a file."
     exit;
 end
 
-filename = ARGV[0]
-puts "Going to open '#{filename}'"
+filename = ARGV[0] #take in des mismatched strings
+puts "Opening '#{filename}'"
 
 fh = open filename
 
 out_file = File.new("des7.broken", "w")
 
 while (line = fh.gets)
-    #line = line[0..22]
-    out_file.puts(line[0..20])
+    out_file.puts(line[0..20]) # string including descrypt hash is 21 characters long when reduced to 7 characters
 end
 
-filename = "des7.broken"
-count = IO.readlines(filename).size
-puts "There are #{count} lines in #{filename}"; 
+puts"Finished"
 
 fh.close
