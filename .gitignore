@@ -2,4 +2,6 @@ fileRead.rb
 NVIDIA-Linux-x86_64-367.128.run
 private-keys-m-c3a48aa6-1e23-400f-84f9-2f5574981f9e-0.pem
 des-mismatch.txt
-des7.broken
+*.broken
+*.run
+*.pem
