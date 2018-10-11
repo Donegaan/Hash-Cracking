@@ -18,4 +18,4 @@ wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rocky
 echo "cloning hash repo"
 git clone https://github.com/Donegaan/prac4-hashes.git
 
-cd prac4-hashes
+chmod +x descrypt.sh
