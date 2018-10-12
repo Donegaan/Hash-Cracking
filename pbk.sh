@@ -14,4 +14,4 @@ hashcat -m 500 -a 3 -O -w 4 --potfile-path=mypot.potfile ./hashes/pbk.txt ?l?l?l
 
 # concatentation attack
 echo "Concat"
-hashcat -m 500 -a 1 -O -w 4 --potfile-path=mypot.potfile ./hashes/pbk.txt ./wordlists/four.txt ./wordlists/four.txt
+hashcat -m 500 -O -w 4 --potfile-path=mypot.potfile ./hashes/pbk.txt ./wordlists/concatWords.txt

@@ -14,4 +14,4 @@ hashcat -m 7400 -a 3 -O -w 4 --potfile-path=mypot.potfile ./hashes/sha256.txt ?l
 
 # concatentation attack
 echo "Concat"
-hashcat -m 7400 -a 1 -O -w 4 --potfile-path=mypot.potfile ./hashes/sha256.txt ./wordlists/four.txt ./wordlists/four.txt
+hashcat -m 7400 -O -w 4 --potfile-path=mypot.potfile ./hashes/sha256.txt ./wordlists/concatWords.txt
