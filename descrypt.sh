@@ -6,8 +6,7 @@ echo "Running DES hashcat"
 
 # dictionary attack
 echo "Rockyou"
-hashcat -m 1500 -a 0 -O -w 4 --potfile-path=mypot.potfile ./hashes/des.txt ./wordlists/rockyou.txt
-
+hashcat -m 1500 -a 0 -O -w 4 --potfile-path=mypot.potfile ./hashes/des.txt ./wordlists
 # mask attack for 5 lowercase letters
 echo "Mask"
 hashcat -m 1500 -a 3 -O -w 4 --potfile-path=mypot.potfile ./hashes/des.txt ?l?l?l?l?l

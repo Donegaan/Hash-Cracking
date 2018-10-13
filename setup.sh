@@ -8,7 +8,7 @@ sudo apt-get install build-essential
 sudo apt-get install linux-image-extra-virtual
 
 echo "Installing NVIDIA driver"
-sudo /bin/bash NVIDIA-g3.run
+sudo /bin/bash NVIDIA-Linux-x86_64-396.44.run
 
 echo "Installing hashcat"
 sudo apt install hashcat
