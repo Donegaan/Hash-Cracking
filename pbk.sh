@@ -1,17 +1,8 @@
 #!/bin/bash
 
-echo "Running pbk hashcat"
+./john --wordlist=concatWords.txt --format=PBKDF2-HMAC-SHA256-opencl pbk.txt --pot=mypot.potfile
 
-#DES cracking
+ehco "getting rockyou"
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
 
-# dictionary attack
-echo "Rockyou"
-hashcat -m 13753 -a 0 -O -w 4 --potfile-path=mypot.potfile ./hashes/pbk.txt ./wordlists/rockyou.txt
-
-# mask attack for 5 lowercase letters
-echo "Mask"
-hashcat -m 13753 -a 3 -O -w 4 --potfile-path=mypot.potfile ./hashes/pbk.txt ?l?l?l?l?l
-
-# concatentation attack
-echo "Concat"
-hashcat -m 13753 -O -w 4 --potfile-path=mypot.potfile ./hashes/pbk.txt ./wordlists/concatWords.txt
+./john --wordlist=rockyou.txt --format=PBKDF2-HMAC-SHA256-opencl pbk.txt --pot=mypot.potfile --stdout=16
