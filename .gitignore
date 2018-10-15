@@ -3,3 +3,5 @@ des-mismatch.txt
 *.broken
 *.run
 *.pem
+allPasses.txt
+allPassesSorted.txt
